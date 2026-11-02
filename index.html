@@ -1,4 +1,1004 @@
+<!-- <!DOCTYPE html>
+<html lang="fr">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio – Zaiet Mariem</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+      color: #333;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(101, 47, 187, 0.411);
+      backdrop-filter: blur(10px);
+      color: #fff;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 20px;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #321854;
+    }
+
+    section {
+      padding: 100px 15%;
+      min-height: 100vh;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgb(101, 47, 187), #ff69b4e0);
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero h2 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 10px 25px;
+      background: #fff;
+      color: #8a2be2;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: rgba(101, 47, 187, 0.411);
+      color: #fff;
+    }
+
+    h3 {
+      color: #000000;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .profile-section {
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #8a2be2;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+      transition: transform 0.4s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .grid2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 0px;
+    }
+
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card2 {
+      background: #fff;
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      object-fit: cover;
+      height: 180px;
+    }
+
+    .card2 img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      object-fit: cover;
+      height: 250px;
+    }
+
+    .skills span,
+    .languages span {
+      display: inline-block;
+      margin: 5px;
+      padding: 8px 15px;
+      border-radius: 25px;
+      background: #f2e8ff;
+      color: #6b21a8;
+      font-weight: 500;
+    }
+
+    footer {
+      background: #642fbb;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    footer a {
+      color: #ffb6f0;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .contact-info {
+      font-size: 1.1em;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Zaiet Mariem</h1>
+    <nav>
+      <a href="#profil">Profil</a>
+      <a href="#education">Éducation</a>
+      <a href="#experience">Expérience</a>
+      <a href="#formations">Formations</a>
+      <a href="#activites">Activités</a>
+      <a href="#travel">Voyages</a>
+      <a href="#distinctions">Distinctions</a>
+      <a href="#skills">Compétences</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero show" id="home">
+    <h2>Bienvenue sur mon Portfolio 🌸</h2>
+    <p>Étudiante passionnée par le marketing digital, la communication et la création de contenu</p>
+    <a href="#profil" class="btn">Découvrir</a>
+  </section>
+
+  <section id="profil" class="profile-section">
+    <img src="images/meriemmmm.png" alt="Photo de profil" class="profile-img">
+    <h3>🌟 À propos de moi 🌟</h3>
+    <p>Je suis <strong style="color: #6b21a8; font-size: large;">ZAIET MARIEM</strong> étudiante en 3ᵉ année de licence
+      en Marketing Digital à l’ISET Djerba.
+      <br> Passionnée par le monde du digital, la création de contenu et l’entrepreneuriat, j’aime donner vie à des
+      idées à travers des stratégies créatives et des projets concrets.
+      <br> Curieuse et toujours en quête d’apprentissage, je m’intéresse particulièrement à la communication digitale,
+      au branding et au marketing des réseaux sociaux.
+      <br>Mon objectif est de bâtir une carrière où je peux allier créativité, innovation et stratégie afin de créer un
+      impact positif dans l’univers numérique.
+      <br> Motivée, ambitieuse et persévérante, je considère chaque défi comme une opportunité d’apprendre, de
+      progresser et de repousser mes limites.
+    </p>
+  </section>
+
+  <section id="education">
+    <h3>Éducation</h3>
+    <div class="grid">
+      <div class="card">
+        <img src="images/ecole.png" alt="Ecole Djerba">
+        <p><b>Ecole primaire Houmet l'arbeh Djerba</b> 2008 – 2014</p>
+      </div>
+      <div class="card">
+        <img src="images/collage.png" alt="collage Djerba">
+        <h4>Collage Erriadh Djerba</h4>
+        <p> 2014 – 2018 </p>
+      </div>
+      <div class="card">
+        <img src="images/lyceeW.png" alt="Lycee Erriadh Djerba">
+        <h4>Lycee Erriadh Djerba</h4>
+        <p> 2018 – 2021 </p>
+      </div>
+      <div class="card">
+        <img src="images/hannibal.png" alt="Lycée Hannibal Djerba">
+        <h4>Baccalauréat Économie & Gestion</h4>
+        <p><b>Lycée Hannibal Djerba</b> 2021 – 2022 </p>
+      </div>
+      <div class="card">
+        <img src="images/iset.png" alt="ISET Djerba">
+        <h4>Licence en Marketing Digital</h4>
+        <p><b>ISET Djerba</b> – 2023 à aujourd’hui</p>
+      </div>
+
+    </div>
+  </section>
+
+<!--   
+  <section id="experience">
+    <h3>Expérience Professionnelle</h3>
+    <div class="grid">
+      <div class="card">
+        <img src="images/bijoux.png" alt="Vente de bijoux">
+        <h4>Projet personnel : Vente de bijoux en ligne (2022–2025)</h4>
+        <p>Création et gestion de contenus, relation clientèle, suivi de commandes et gestion de paiements.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/steg.png" alt="Stage STEG">
+        <h4>Stage – STEG (Janvier 2024)</h4>
+        <p>Découverte du fonctionnement d’une grande entreprise et développement du sens de l’organisation.</p>
+      </div>
+      <div class="card">
+        <img src="images/tele.png" alt="Télétravail marketing">
+        <h4>Télétravail en Marketing Digital</h4>
+        <p>Gestion des réseaux sociaux, création de visuels et stratégies de contenu.</p>
+      </div>
+      <div class="card">
+        <img src="images/exist.png" alt="EXIST">
+        <h4>Travail en boutique EXIST</h4>
+        <p>Expérience en vente et relation client au sein de la boutique EXIST. Accueil des clients, conseil sur les
+          produits, gestion des stocks et organisation des présentoirs pour optimiser l’expérience d’achat.</p>
+      </div>
+    </div>
+  </section> 
+
+
+
+<section id="experience">
+  <h3>Expérience Professionnelle</h3>
+  <div class="grid">
+
+    <div class="card">
+      <img src="images/bijoux.png" alt="Vente de bijoux">
+      <h4>Projet personnel : Vente de bijoux en ligne (2022–2025)</h4>
+      <p>
+        Création et gestion de contenus, relation clientèle,
+        suivi de commandes et gestion de paiements.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="images/steg.png" alt="Stage STEG">
+      <h4>Stage – STEG (Janvier 2024)</h4>
+      <p>
+        Découverte du fonctionnement d’une grande entreprise
+        et développement du sens de l’organisation.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="images/WEE.png" alt="WEE - Water & Energy Engineering">
+      <h4>Stage – WEE (Janvier 2026)</h4>
+      <p>
+        Création de contenus digitaux et de supports graphiques pour promouvoir
+        les services photovoltaïques, ainsi que développement d’une plateforme
+        e-commerce avec React, Laravel et MySQL.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="images/tele.png" alt="Télétravail marketing">
+      <h4>Télétravail en Marketing Digital</h4>
+      <p>
+        Gestion des réseaux sociaux, création de visuels
+        et stratégies de contenu.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="images/exist.png" alt="EXIST">
+      <h4>Travail en boutique EXIST</h4>
+      <p>
+        Expérience en vente et relation client au sein de la boutique EXIST.
+        Accueil des clients, conseil sur les produits, gestion des stocks
+        et organisation des présentoirs pour optimiser l’expérience d’achat.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="formations">
+  <h3>Formations & Réalisations</h3>
+  <div class="grid">
+
+    <div class="card">
+      <img src="images/p4mlogo.png" alt="P4M">
+      <h4>P4M</h4>
+      <p>
+        Formation professionnelle P4M axée sur le développement personnel
+        et la gestion de projets. Acquisition de compétences pratiques
+        et théoriques pour la réussite académique et professionnelle.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="images/bnl.png" alt="PNL">
+      <h4>Conseil américain de Programmation Neuro-Linguistique (ABNLP)</h4>
+      <p>
+        Formation en PNL axée sur le leadership et la gestion organisationnelle,
+        incluant des ateliers pratiques pour renforcer les capacités
+        décisionnelles et de communication.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="images/english.png" alt="Formation en anglais">
+      <h4>Anglais</h4>
+      <p>
+        Perfectionnement linguistique en anglais, avec un accent sur
+        la communication orale et écrite, la compréhension de textes
+        complexes et la présentation professionnelle.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="images/design.png" alt="Design graphique">
+      <h4>Design Graphique</h4>
+      <p>
+        Utilisation d’outils de design graphique tels que Photoshop,
+        Illustrator et Canva pour créer des supports visuels destinés
+        à des projets personnels et académiques.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="images/violence.png" alt="Violences contre les femmes">
+      <h4>Violences contre les femmes</h4>
+      <p>
+        Formation de sensibilisation et de prévention des violences,
+        visant à promouvoir l’égalité, la sécurité et le respect.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="images/isetcer.png" alt="Médaille du leader étudiant">
+      <h4>Médaille du leader étudiant</h4>
+      <p>
+        Distinction récompensant le leadership et l’engagement dans
+        la vie étudiante et les clubs académiques, ainsi que l’esprit
+        de responsabilité et de coopération.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="images/tn88.png" alt="Tunisia 88">
+      <h4>Tunisia 88</h4>
+      <p>
+        Participation au concours Tunisia 88 en piano et en orgue,
+        avec trois certificats de leadership récompensant la performance
+        artistique et l’esprit d’équipe.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+  <section id="formations">
+    <h3>Formations & Réalisations</h3>
+    <div class="grid">
+      <div class="card">
+        <img src="images/p4mlogo.png" alt="P4M">
+        <h4>P4M</h4>
+        <p>Formation professionnelle P4M axée sur le développement personnel et la gestion de projets. Acquis de
+          compétences pratiques et théoriques pour la réussite académique et professionnelle.</p>
+      </div>
+      <div class="card">
+        <img src="images/bnl.png" alt="PNL">
+        <h4>Conseil américain de Programmation Neuro-Linguistique (ABNLP)</h4>
+        <p>Formation Conseil américain PNL sur le leadership et la gestion organisationnelle, incluant des ateliers
+          pratiques pour
+          renforcer les capacités décisionnelles et de communication.</p>
+      </div>
+      <div class="card">
+        <img src="images/english.png" alt="Formation en anglais">
+        <h4>Anglais</h4>
+        <p>Perfectionnement linguistique en anglais, avec accent sur la communication orale et écrite, compréhension de
+          textes complexes et présentation professionnelle.</p>
+      </div>
+      <div class="card">
+        <img src="images/design.png" alt="Design graphique">
+        <h4>Design Graphique</h4>
+        <p>Maîtrise des outils de design graphique (Photoshop, Illustrator, Canva) et création de supports visuels pour
+          projets personnels et académiques.</p>
+      </div>
+      <div class="card">
+        <img src="images/violence.png" alt="Violences contre les femmes">
+        <h4>Violences contre les femmes</h4>
+        <p>Formation de sensibilisation et prévention des violences, visant à promouvoir l’égalité, la sécurité et le
+          respect dans la société.</p>
+      </div>
+      <div class="card">
+        <img src="images/isetcer.png" alt="Médaille du leader étudiant">
+        <h4>Médaille du leader étudiant</h4>
+        <p>Décernée pour le leadership exceptionnel et l’engagement actif dans la vie étudiante et les clubs
+          académiques, encourageant la responsabilité et la coopération.</p>
+      </div>
+      <div class="card">
+        <img src="images/tn88.jpeg" alt="Tunisia 88">
+        <h4>Tunisia 88</h4>
+        <p>Participation au concours Tunisia 88 : lauréat en piano et orgue, avec trois certificats de leadership pour
+          performance artistique et esprit d’équipe.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="activites">
+    <h3>Activités</h3>
+    <div class="grid">
+      <div class="card">
+        <img src="images/TN888.jpeg" width="50px" height="50px" alt="Tunisia 88">
+        <h4>Tunisia 88</h4>
+        <p>Membre du groupe Tunisia 88, reconnu pour son excellence musicale et son esprit de collaboration. Récompensé
+          pour les performances au piano et à l’orgue, ainsi que pour le leadership et l’implication dans l’événement.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/org.jpeg" width="50px" height="50px" alt="Tunisia 88">
+        <h4>Tunisia 88</h4>
+        <p>Participation au prestigieux concours musical Tunisia 88. Lauréat en piano et orgue, avec trois certificats
+          de leadership étudiant pour engagement et performance artistique exceptionnelle.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="travel">
+    <h3>Voyages</h3>
+    <div class="grid">
+      <div class="card2">
+        <img src="images/tk2.png" alt="Galata Tower">
+        <h4>Galata Tower</h4>
+        <p>Visité la célèbre tour de Galata à Istanbul et admiré la vue panoramique sur la ville.</p>
+      </div>
+      <div class="card2">
+        <img src="images/tk4.png" alt="Dolmabahçe Palace">
+        <h4>Dolmabahçe Palace</h4>
+        <p>Exploré le somptueux palais de Dolmabahçe, symbole de l'histoire et de l'architecture ottomane.</p>
+      </div>
+      <div class="card2">
+        <img src="images/tk3.png" alt="Istanbul Streets">
+        <h4>Rues d'Istanbul</h4>
+        <p>Balade dans les rues animées d'Istanbul, en découvrant les marchés, cafés et quartiers historiques.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="distinctions">
+    <h3>Distinctions</h3>
+    <div class="grid">
+      <div class="card">
+        <h4>Sports & Loisirs</h4>
+        <div class="card-images">
+          <img src="images/sport10.png" alt="Football">
+          <img src="images/sport5.png" alt="Football">
+          <img src="images/sport7.png" alt="Football">
+          <img src="images/sport3.png" alt="bisclette">
+        </div>
+        <p>Passionnée de sport depuis l’enfance, pratique régulière du football, musculation, gymnastique, aerobics et
+          équitation. Participation à des compétitions locales et activités de loisirs variées pour développer l’esprit
+          d’équipe et la discipline.</p>
+      </div>
+
+      <div class="card">
+        <h4>Engagements & Événements</h4>
+        <div class="card-images">
+          <img src="images/sport4.png">
+          <img src="images/cent.png">
+          <img src="images/p4m.jpg.jpeg">
+          <img src="images/hac.png">
+        </div>
+        <p>Membre actif de plusieurs clubs et associations étudiantes. Organisation et participation à des événements
+          académiques et technologiques tels que hackathons et conférences sur l’IA. Engagement dans le développement
+          personnel, le leadership et la collaboration en équipe.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h3>Compétences</h3>
+    <div class="skills">
+      <span>Microsoft Office 365</span>
+      <span>Leadership</span>
+      <span>Création de contenu</span>
+      <span>Canva</span>
+      <span>Marketing digital</span>
+      <span>Meta Business Suite</span>
+      <span>Communication</span>
+      <span>Travail en équipe</span>
+      <span>Pensée critique</span>
+      <span>Comptabilité & Droit</span>
+    </div>
+
+    <h3>Langues</h3>
+    <div class="languages">
+      <span>Arabe (langue maternelle)</span>
+      <span>Français</span>
+      <span>Anglais</span>
+    </div>
+
+    <h3>🎯 Objectif Professionnel</h3>
+    <p
+      style="max-width:700px; margin:10px auto; text-align:center; font-size:1.1em; line-height:1.6; background: #f3e8ff; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+      Développer mes compétences en <strong>marketing digital</strong>, <strong>communication</strong> et
+      <strong>gestion de projets</strong>, afin de contribuer efficacement à des initiatives créatives et innovantes
+      dans le domaine numérique.
+      <br><br>
+      Je souhaite également approfondir mes connaissances en <strong>branding</strong> et <strong>stratégie de
+        contenu</strong>, renforcer mes aptitudes en <strong>travail d'équipe</strong> et <strong>leadership</strong>,
+      et acquérir une expérience pratique pour mener à bien des projets ambitieux.
+      <br><br>
+      Mon objectif est de combiner créativité, innovation et organisation pour avoir un impact positif et durable dans
+      les projets numériques et développer un profil professionnel complet et polyvalent.
+    </p>
+
+    <br>
+    <h3>💪 Points forts</h3>
+    <div class="strengths-grid"
+      style="display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:10px; margin-top:20px;">
+      <div class="strength-card"
+        style="background:#f5e6ff; padding:7px 10px; border-radius:12px; text-align:center; font-weight:400; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        Curiosité & volonté <br> d'apprendre</div>
+      <div class="strength-card"
+        style="background:#e0c8ff; padding:7px 10px; border-radius:12px; text-align:center; font-weight:400; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        Organisation & rigueur</div>
+      <div class="strength-card"
+        style="background:#d1b3ff; padding:7px 10px; border-radius:12px; text-align:center; font-weight:400; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        Créativité & innovation</div>
+      <div class="strength-card"
+        style="background:#c299ff; padding:7px 10px; border-radius:12px; text-align:center; font-weight:400; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        Adaptabilité & flexibilité</div>
+      <div class="strength-card"
+        style="background:#b27fff; padding:7px 10px; border-radius:12px; text-align:center; font-weight:400; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        Esprit d'équipe & collaboration</div>
+      <div class="strength-card"
+        style="background:#a366ff; padding:7px 10px; border-radius:12px; text-align:center; font-weight:400; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        Persévérance & motivation</div>
+    </div>
+  </section>
+
+
+  <section id="realisations">
+    <h3>Mes Réalisations</h3>
+    <div class="grid">
+      <div class="card">
+        <img src="images/insta.png" alt="Publication Instagram" width="40px" height="40px">
+        <h4>Page Instagram du projet</h4>
+        <p>Création de contenu, design sur Canva, rédaction de posts et gestion de la communauté pour assurer visibilité
+          et engagement.</p>
+      </div>
+      <div class="card">
+        <img src="images/canva.png" alt="Design Canva" width="40px" height="40px">
+        <h4>Créations graphiques</h4>
+        <p>Conception de visuels promotionnels, stories et bannières pour les réseaux sociaux, avec attention au design
+          et à l’impact visuel.</p>
+      </div>
+      <div class="card">
+        <img src="images/stats.png" alt="Statistiques de page" width="40px" height="40px">
+        <h4>Statistiques & Engagement</h4>
+        <p>Suivi des performances des publications sur Meta Business Suite, analyse des indicateurs clés et ajustement
+          des stratégies pour maximiser l’impact.</p>
+      </div>
+      <div class="card">
+        <img src="images/office.png" alt="Compétences Office" width="40px" height="40px">
+        <h4>Microsoft Office & Organisation</h4>
+        <p>Réalisation de rapports professionnels sous Word, tableaux et analyses sous Excel, et présentations
+          interactives sur PowerPoint pour projets académiques et professionnels.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contact">
+    <h3>Contact</h3>
+    <div class="grid2">
+      <p class="contact-info">
+        <img src="images/linkedin.png" width="20px" height="18px"> <a style="color: #0e1f6b; "
+          href="https://www.linkedin.com/in/meriem-zayet-806639220/" target="_blank">Linked In</a> <br>
+        <img src="images/instagram.png" width="20px" height="21px"> <a style="color: #aa0f6c; "
+          href="https://www.instagram.com/meriemzayet_/" target="_blank">Instagram</a> <br>
+        📞 <a href="tel:+21623345218" style="color: #a0094f98; ">+216 23 345 218</a><br>
+        📧 <a href="mailto:zayetmariem2@gmail.com" style="color: #2a48cd; ">zayetmariem2@gmail.com</a><br>
+        📍 Djerba, Tunisie
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Zaiet Mariem | Portfolio personnel</p>
+    <p><a href="#accueil">⬆ Retour en haut</a></p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("show");
+      });
+    }, { threshold: 0.2 });
+    sections.forEach(sec => observer.observe(sec));
+  </script>
+</body>
+
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zayet Mariem | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#10243A; --sea:#1B6E8C; --lagoon:#BFE6EE; --sun:#F4B63F; --coral:#EE6C6C;
+  --paper:#F6FAFB; --card:#FFFFFF; --muted:#5B6B7A; --line:#D5E3E8;
+  --display:'Bricolage Grotesque','Segoe UI',sans-serif; --body:'DM Sans','Segoe UI',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.65;font-size:17px;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(246,250,251,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:var(--display);font-weight:800;font-size:1.15rem;text-decoration:none}
+nav{display:flex;gap:4px}
+nav a{text-decoration:none;font-size:.88rem;font-weight:500;padding:6px 10px;border-radius:8px;color:var(--muted)}
+nav a:hover{color:var(--ink);background:var(--lagoon)}
+nav a.active{color:var(--ink);background:var(--sun)}
+#burger{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:6px 12px;font:inherit;cursor:pointer;color:var(--ink)}
+
+/* hero */
+.hero{padding:72px 0 96px;background:
+  radial-gradient(circle at 85% 20%,var(--lagoon) 0,transparent 45%),var(--paper)}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.8rem,7vw,5.4rem);line-height:.98;letter-spacing:-.03em}
+.hero h1 span{display:block;color:var(--sea)}
+.hero p.lead{margin:28px 0 36px;max-width:34em;font-size:1.15rem;color:var(--muted)}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 26px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--ink);transition:transform .2s,background .2s}
+.btn.main{background:var(--ink);color:#fff}
+.btn:hover{transform:translateY(-2px)}
+.btn.main:hover{background:var(--sea);border-color:var(--sea)}
+.facts{display:flex;gap:28px;margin-top:44px;flex-wrap:wrap}
+.facts div{font-size:.9rem;color:var(--muted)}
+.facts b{display:block;font-family:var(--display);font-size:1.5rem;color:var(--ink)}
+.arch{position:relative;justify-self:center;width:min(100%,340px)}
+.arch::before{content:"";position:absolute;inset:18px -18px -18px 18px;border-radius:999px 999px 24px 24px;background:var(--sun)}
+.arch img{position:relative;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:999px 999px 24px 24px;border:4px solid var(--ink);background:var(--lagoon)}
+.hero .wrap>*{animation:rise .8s both}
+.hero .arch{animation-delay:.2s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+/* sections */
+section{padding:88px 0}
+section:nth-of-type(even){background:#fff;border-block:1px solid var(--line)}
+.head{margin-bottom:44px;max-width:640px}
+.head h2{font-family:var(--display);font-weight:800;font-size:clamp(2rem,4.5vw,3rem);letter-spacing:-.02em;line-height:1.1}
+.head p{color:var(--muted);margin-top:10px}
+.head::after{content:"";display:block;width:56px;height:6px;border-radius:6px;background:var(--coral);margin-top:18px}
+
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.about p{margin-bottom:16px}
+.about .big{font-family:var(--display);font-size:1.6rem;line-height:1.3;font-weight:700}
+
+/* timeline (education) */
+.tl{list-style:none;border-left:3px solid var(--lagoon);margin-left:12px}
+.tl li{position:relative;padding:0 0 30px 34px;display:flex;gap:16px;align-items:center}
+.tl li::before{content:"";position:absolute;left:-11px;top:14px;width:19px;height:19px;border-radius:50%;background:var(--paper);border:4px solid var(--sea)}
+.tl li.now::before{border-color:var(--coral);background:var(--coral)}
+.tl img{width:56px;height:56px;border-radius:14px;object-fit:cover;flex:none;border:1px solid var(--line)}
+.tl h3{font-family:var(--display);font-size:1.15rem;line-height:1.3}
+.tl small{color:var(--muted);font-size:.9rem}
+
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 16px 32px -16px rgba(16,36,58,.35)}
+.card .ph{height:160px;background:var(--lagoon);overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:cover}
+.card .body{padding:20px 22px 24px}
+.card h3{font-family:var(--display);font-size:1.1rem;line-height:1.3;margin-bottom:4px}
+.card .tag{display:inline-block;font-size:.8rem;font-weight:700;background:var(--sun);color:var(--ink);border-radius:6px;padding:1px 9px;margin-bottom:10px}
+.card p{font-size:.95rem;color:var(--muted)}
+.card.exp{border-top:5px solid var(--sea)}
+.card.exp:nth-child(3n+2){border-top-color:var(--coral)}
+.card.exp:nth-child(3n){border-top-color:var(--sun)}
+.card.small .ph{height:90px;display:flex;align-items:center;justify-content:center;padding:14px}
+.card.small .ph img{width:auto;max-height:100%;object-fit:contain}
+
+/* distinctions */
+.duo{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
+.duo .card .mosaic{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;background:var(--line)}
+.duo .card .mosaic img{aspect-ratio:1;width:100%;object-fit:cover}
+
+/* skills */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{padding:9px 18px;border-radius:999px;background:var(--lagoon);font-weight:500;font-size:.95rem;transition:background .2s}
+.chips span:hover{background:var(--sun)}
+.chips.lang span{background:var(--ink);color:#fff}
+.sub{font-family:var(--display);font-size:1.3rem;margin:44px 0 16px}
+.goal{background:var(--ink);color:#EAF3F6;border-radius:22px;padding:36px;margin-top:44px;display:grid;grid-template-columns:auto 1fr;gap:28px}
+.goal h3{font-family:var(--display);font-size:1.5rem;color:var(--sun)}
+.goal p+p{margin-top:12px}
+.strengths{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.strengths div{padding:16px 18px;border-left:5px solid var(--sea);background:var(--card);border-radius:0 12px 12px 0;font-weight:500;border-block:1px solid var(--line);border-right:1px solid var(--line)}
+.strengths div:nth-child(3n+2){border-left-color:var(--coral)}
+.strengths div:nth-child(3n){border-left-color:var(--sun)}
+
+/* cv + contact */
+.cv img{border-radius:16px;border:1px solid var(--line);box-shadow:0 20px 40px -20px rgba(16,36,58,.4);margin:0 auto;max-width:860px;width:100%}
+.contact{background:var(--ink)!important;color:#fff;border:0!important}
+.contact .head h2{color:#fff}
+.contact .head p{color:var(--lagoon)}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.links a{display:flex;align-items:center;gap:14px;padding:20px 22px;border:1.5px solid rgba(255,255,255,.25);border-radius:16px;text-decoration:none;font-weight:500;transition:background .2s,color .2s}
+.links a:hover{background:var(--sun);color:var(--ink);border-color:var(--sun)}
+.links i{font-style:normal;font-size:1.4rem}
+footer{background:#0A1826;color:#8FA5B5;text-align:center;padding:28px 24px;font-size:.9rem}
+footer a{color:var(--sun)}
+
+@media(max-width:860px){
+  .hero .wrap,.about,.goal{grid-template-columns:1fr}
+  .hero{padding:48px 0 72px}.arch{order:-1;width:min(70%,260px)}
+  #burger{display:block}
+  nav{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--paper);padding:12px 24px 20px;border-bottom:1px solid var(--line)}
+  nav.open{display:flex}
+  section{padding:64px 0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="#home" class="logo">Zayet Mariem</a>
+    <button id="burger" aria-label="Menu" aria-expanded="false">Menu</button>
+    <nav id="nav">
+      <a href="#profil">Profil</a><a href="#education">Éducation</a><a href="#experience">Expérience</a>
+      <a href="#formations">Formations</a><a href="#activites">Activités</a><a href="#travel">Voyages</a>
+      <a href="#distinctions">Distinctions</a><a href="#skills">Compétences</a><a href="#realisations">Réalisations</a>
+      <a href="#cv">CV</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <h1>Zayet Mariem <span>marketing digital &amp; création de contenu.</span></h1>
+      <p class="lead">Étudiante en licence de Marketing Digital à l’ISET Djerba. Je transforme des idées en stratégies créatives et en projets concrets.</p>
+      <div class="btns">
+        <a href="#realisations" class="btn main">Voir mes réalisations</a>
+        <a href="#contact" class="btn">Me contacter</a>
+      </div>
+      <div class="facts">
+        <div><b>3ᵉ année</b>Licence ISET Djerba</div>
+        <div><b>3 langues</b>Arabe, français, anglais</div>
+        <div><b>Djerba</b>Tunisie</div>
+      </div>
+    </div>
+    <div class="arch"><img src="images/meriemmmm.png" alt="Portrait de Zayet Mariem"></div>
+  </div>
+</div>
+
+<section id="profil">
+  <div class="wrap">
+    <div class="head"><h2>À propos de moi</h2></div>
+    <div class="about">
+      <p class="big">Passionnée par le digital, la création de contenu et l’entrepreneuriat, j’aime donner vie à des idées.</p>
+      <div>
+        <p>Je suis <strong>Zayet Mariem</strong>, étudiante en 3ᵉ année de licence en Marketing Digital à l’ISET Djerba.</p>
+        <p>Curieuse et toujours en quête d’apprentissage, je m’intéresse à la communication digitale, au branding et au marketing des réseaux sociaux.</p>
+        <p>Mon objectif : bâtir une carrière qui allie créativité, innovation et stratégie, pour avoir un impact positif dans l’univers numérique.</p>
+        <p>Motivée, ambitieuse et persévérante, je vois chaque défi comme une occasion d’apprendre et de repousser mes limites.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education"><div class="wrap"><div class="head"><h2>Éducation</h2></div><ul class="tl" id="edu"></ul></div></section>
+<section id="experience"><div class="wrap"><div class="head"><h2>Expérience professionnelle</h2></div><div class="grid" id="exp"></div></div></section>
+<section id="formations"><div class="wrap"><div class="head"><h2>Formations &amp; certifications</h2></div><div class="grid" id="form"></div></div></section>
+<section id="activites"><div class="wrap"><div class="head"><h2>Activités</h2></div><div class="grid" id="act"></div></div></section>
+<section id="travel"><div class="wrap"><div class="head"><h2>Voyages</h2><p>Istanbul, entre histoire et vie de quartier.</p></div><div class="grid" id="trav"></div></div></section>
+
+<section id="distinctions">
+  <div class="wrap">
+    <div class="head"><h2>Distinctions</h2></div>
+    <div class="duo">
+      <div class="card"><div class="mosaic"><img src="images/sport10.png" alt="Football"><img src="images/sport5.png" alt="Football"><img src="images/sport7.png" alt="Football"><img src="images/sport3.png" alt="Vélo"></div>
+        <div class="body"><h3>Sports &amp; loisirs</h3><p>Passionnée de sport depuis l’enfance : football, musculation, gymnastique, aérobic et équitation. Compétitions locales et loisirs variés pour développer l’esprit d’équipe et la discipline.</p></div></div>
+      <div class="card"><div class="mosaic"><img src="images/sport4.png" alt=""><img src="images/cent.png" alt=""><img src="images/p4m.jpg.jpeg" alt=""><img src="images/hac.png" alt=""></div>
+        <div class="body"><h3>Engagements &amp; événements</h3><p>Membre active de plusieurs clubs et associations étudiantes. Organisation et participation à des hackathons et conférences sur l’IA. Engagement dans le développement personnel, le leadership et le travail d’équipe.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="head"><h2>Compétences</h2></div>
+    <div class="chips" id="skl"></div>
+    <h3 class="sub">Langues</h3>
+    <div class="chips lang"><span>Arabe (langue maternelle)</span><span>Français</span><span>Anglais</span></div>
+    <div class="goal">
+      <h3>Objectif<br>professionnel</h3>
+      <div>
+        <p>Développer mes compétences en <strong>marketing digital</strong>, <strong>communication</strong> et <strong>gestion de projets</strong>, afin de contribuer à des initiatives créatives et innovantes.</p>
+        <p>Approfondir le <strong>branding</strong> et la <strong>stratégie de contenu</strong>, renforcer le <strong>travail d’équipe</strong> et le <strong>leadership</strong>, et acquérir une expérience pratique pour mener des projets ambitieux.</p>
+      </div>
+    </div>
+    <h3 class="sub">Points forts</h3>
+    <div class="strengths" id="str"></div>
+  </div>
+</section>
+
+<section id="realisations"><div class="wrap"><div class="head"><h2>Mes réalisations</h2></div><div class="grid" id="real"></div></div></section>
+<section id="cv" class="cv"><div class="wrap"><div class="head"><h2>Mon CV</h2></div><img src="images/CV.png" alt="CV de Zayet Mariem"></div></section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="head"><h2>Travaillons ensemble</h2><p>Un projet, un stage, une idée ? Écrivez-moi.</p></div>
+    <div class="links">
+      <a href="mailto:zayetmariem2@gmail.com"><i>✉</i>zayetmariem2@gmail.com</a>
+      <a href="tel:+21623345218"><i>☎</i>+216 23 345 218</a>
+      <a href="https://www.linkedin.com/in/meriem-zayet-806639220/" target="_blank" rel="noopener"><i>in</i>LinkedIn</a>
+      <a href="https://www.instagram.com/meriemzayet_/" target="_blank" rel="noopener"><i>◎</i>Instagram</a>
+      <a href="#home"><i>⌂</i>Djerba, Tunisie</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><p>© 2026 Zayet Mariem · Portfolio personnel · <a href="#home">Retour en haut</a></p></footer>
+
+<script>
+const D={
+edu:[
+ ["ecole","École primaire Houmet l’arbeh, Djerba","2008 – 2014"],
+ ["collage","Collège Erriadh, Djerba","2014 – 2018"],
+ ["lyceeW","Lycée Erriadh, Djerba","2018 – 2021"],
+ ["hannibal","Baccalauréat Économie &amp; Gestion · Lycée Hannibal, Djerba","2021 – 2022"],
+ ["iset","Licence en Marketing Digital · ISET Djerba","2023 – aujourd’hui",1]],
+exp:[
+ ["bijoux","Vente de bijoux en ligne","2022 – 2025 · Projet personnel","Création et gestion de contenus, relation clientèle, suivi de commandes et gestion de paiements."],
+ ["steg","Stage · STEG","Janvier 2024","Découverte du fonctionnement d’une grande entreprise et développement du sens de l’organisation."],
+ ["WEE","Stage · WEE","Janvier 2026","Création de contenus digitaux et de supports graphiques pour promouvoir les services photovoltaïques, et développement d’une plateforme e-commerce avec React, Laravel et MySQL."],
+ ["p4mlogo","Télétravail en marketing digital","","Gestion des réseaux sociaux, création de visuels et stratégies de contenu."],
+ ["exist","Boutique EXIST","","Vente et relation client : accueil, conseil sur les produits, gestion des stocks et organisation des présentoirs pour une meilleure expérience d’achat."]],
+form:[
+ ["chabeb","Certificat de participation · Bibliothèque publique","","Soirée d’animation culturelle à la Maison des Jeunes et à la Bibliothèque publique de Riyadh."],
+ ["bnl","Conseil américain de PNL (ABNLP)","","Formation en leadership et gestion organisationnelle, avec ateliers pratiques pour renforcer la décision et la communication."],
+ ["english","Anglais","","Perfectionnement à l’oral et à l’écrit, compréhension de textes complexes et présentation professionnelle."],
+ ["design","Design graphique","","Photoshop, Illustrator et Canva : création de supports visuels pour projets personnels et académiques."],
+ ["violence","Violences contre les femmes","","Sensibilisation et prévention pour promouvoir l’égalité, la sécurité et le respect."],
+ ["isetcer","Médaille du leader étudiant","","Décernée pour le leadership et l’engagement dans la vie étudiante et les clubs académiques."],
+ ["tn88","Tunisia 88","","Lauréate en piano et orgue, avec trois certificats de leadership pour la performance artistique et l’esprit d’équipe."],
+ ["crt","Travail collaboratif","","Certification « Collaborative Work in the Workplace » (Edraak via Forsa) : communication et travail d’équipe.",".jpg"]],
+act:[
+ ["design","Design graphique · centre Elife","","Visuels, affiches et contenus digitaux avec Canva et Photoshop, et supports de communication pour divers événements."],
+ ["TN888","Tunisia 88","","Membre du groupe, reconnu pour son excellence musicale. Récompensée au piano et à l’orgue, et lauréate de trois certificats de leadership étudiant.",".jpeg"]],
+trav:[
+ ["tk2","Tour de Galata","","Vue panoramique sur Istanbul depuis la célèbre tour."],
+ ["tk4","Palais de Dolmabahçe","","Un symbole de l’histoire et de l’architecture ottomane."],
+ ["tk3","Rues d’Istanbul","","Marchés, cafés et quartiers historiques."]],
+real:[
+ ["insta","Page Instagram du projet","","Création de contenu, design sur Canva, rédaction de posts et animation de la communauté pour la visibilité et l’engagement."],
+ ["canva","Créations graphiques","","Visuels promotionnels, stories et bannières pour les réseaux sociaux, avec soin du design et de l’impact visuel."],
+ ["stats","Statistiques &amp; engagement","","Suivi des publications sur Meta Business Suite, analyse des indicateurs clés et ajustement des stratégies."],
+ ["office","Microsoft Office &amp; organisation","","Rapports sous Word, analyses sous Excel et présentations PowerPoint pour des projets académiques et professionnels."]],
+skl:["Microsoft Office 365","Leadership","Création de contenu","Canva","Marketing digital","Meta Business Suite","Communication","Travail en équipe","Pensée critique","Comptabilité & Droit"],
+str:["Curiosité & volonté d’apprendre","Organisation & rigueur","Créativité & innovation","Adaptabilité & flexibilité","Esprit d’équipe & collaboration","Persévérance & motivation"]
+};
+const $=id=>document.getElementById(id);
+const src=(n,e)=>`images/${n}${e||".png"}`;
+$("edu").innerHTML=D.edu.map(([i,t,y,now])=>`<li class="${now?"now":""}"><img src="${src(i)}" alt="" onerror="this.style.display='none'"><div><h3>${t}</h3><small>${y}</small></div></li>`).join("");
+const cards=(k,cls)=>$(k).innerHTML=D[k].map(([i,t,tag,p,e])=>`<article class="card ${cls}"><div class="ph"><img src="${src(i,e)}" alt="${t}" loading="lazy" onerror="this.parentNode.style.display='none'"></div><div class="body">${tag?`<span class="tag">${tag}</span>`:""}<h3>${t}</h3><p>${p}</p></div></article>`).join("");
+cards("exp","exp");cards("form","");cards("act","");cards("trav","");cards("real","small");
+$("skl").innerHTML=D.skl.map(s=>`<span>${s}</span>`).join("");
+$("str").innerHTML=D.str.map(s=>`<div>${s}</div>`).join("");
+
+const nav=$("nav"),b=$("burger");
+b.onclick=()=>{const o=nav.classList.toggle("open");b.setAttribute("aria-expanded",o)};
+nav.onclick=e=>{if(e.target.tagName==="A")nav.classList.remove("open")};
+const links=[...nav.querySelectorAll("a")];
+document.querySelectorAll("main section").forEach(s=>new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(l=>l.classList.toggle("active",l.getAttribute("href")==="#"+s.id))}),{rootMargin:"-45% 0px -50% 0px"}).observe(s));
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ///////////////////////vvvvvvvvvvvv222222222222 -->
+<!-- 
 <html>
 
 <head>
@@ -327,6 +1327,15 @@
         <p>Découverte du fonctionnement d’une grande entreprise et développement du sens de l’organisation.</p>
       </div>
       <div class="card">
+      <img src="images/WEE.png" alt="WEE - Water & Energy Engineering">
+      <h4>Stage – WEE (Janvier 2026)</h4>
+      <p>
+        Création de contenus digitaux et de supports graphiques pour promouvoir
+        les services photovoltaïques, ainsi que développement d’une plateforme
+        e-commerce avec React, Laravel et MySQL.
+      </p>
+    </div>
+      <div class="card">
         <img src="images/p4mlogo.png" alt="Télétravail marketing">
         <h4>Télétravail en Marketing Digital</h4>
         <p>Gestion des réseaux sociaux, création de visuels et stratégies de contenu.</p>
@@ -396,13 +1405,6 @@
   <section id="activites">
     <h3>Activités</h3>
     <div class="grid">
-      <!-- <div class="card">
-        <img src="images/TN888.jpeg" width="50px" height="50px" alt="Tunisia 88">
-        <h4>Tunisia 88</h4>
-        <p>Membre du groupe Tunisia 88, reconnu pour son excellence musicale et son esprit de collaboration. Récompensé
-          pour les performances au piano et à l’orgue, ainsi que pour le leadership et l’implication dans l’événement.
-        </p>
-      </div> -->
       <div class="card">
         <img src="images/design.png" width="50px" height="50px" alt="Design graphique">
         <h4>Design graphique</h4>
@@ -625,4 +1627,4 @@
     sections.forEach(sec => observer.observe(sec));
   </script>
 
-</html>
+</html> -->
